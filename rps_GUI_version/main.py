@@ -6,6 +6,7 @@ root.config(bg='#515b66') #515b66
 root.geometry("540x300")
 root.resizable(width=False, height=False)
 
+# The three valid choices
 choices = ['ROCK', 'PAPER', 'SCISSORS']
 
 
@@ -22,6 +23,8 @@ bot_lab.grid(row=2, column=1, columnspan=2, sticky=S)
 str_var3 = StringVar(root, value='Status: ')
 status_lab = Label(root, textvariable=str_var3, bg='#515b66', font= ('Helvetica', 16, 'bold'))
 status_lab.grid(row=3, column=0, columnspan=3, pady=30)
+
+# function to check for win
 def check(user, bot):
     if user == choices[0] and bot == choices[2]:
         return True
